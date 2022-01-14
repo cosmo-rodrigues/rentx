@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import {} from 'expo-splash-screen';
 
 import {
   useFonts,
@@ -14,10 +13,9 @@ import {
   Archivo_600SemiBold,
 } from '@expo-google-fonts/archivo';
 
-import { Home } from './src/screens/Home';
-
 import theme from './src/styles/theme';
 import { Text } from 'react-native';
+import { CarDetails } from './src/screens/CarDetails';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,7 +32,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <CarDetails />
     </ThemeProvider>
   );
 }
