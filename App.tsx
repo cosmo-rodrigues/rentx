@@ -1,6 +1,9 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
 
 import { ThemeProvider } from 'styled-components';
+import theme from './src/styles/theme';
 
 import {
   useFonts,
@@ -13,9 +16,9 @@ import {
   Archivo_600SemiBold,
 } from '@expo-google-fonts/archivo';
 
-import theme from './src/styles/theme';
 import { Text } from 'react-native';
-import { SchedulingDetails } from './src/screens/SchedulingDetails';
+import { NavigationContainer } from '@react-navigation/native';
+import Routes from './src/routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,7 +35,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SchedulingDetails />
+      <Routes />
     </ThemeProvider>
   );
 }

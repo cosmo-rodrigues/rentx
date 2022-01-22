@@ -1,8 +1,10 @@
-import { FlatList } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+import { FlatList } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
+import { RFValue } from 'react-native-responsive-fontsize';
+
+export const Container = styled(RectButton)`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.background_secondary};
   flex-direction: row;
