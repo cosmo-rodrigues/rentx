@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 
-import { FlatList } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
 
@@ -59,10 +58,3 @@ export const CarImage = styled.Image`
   height: 85px;
   width: 167px;
 `;
-
-export const CarList = styled(FlatList).attrs({
-  contentContainerStyle: {
-    padding: 24,
-  },
-  showsVerticalScrollIndicator: false,
-})``;
